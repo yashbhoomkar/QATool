@@ -4,7 +4,8 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Dict, List, Tuple, Any, Set
 
-from .parser import FileEntities, ClassInfo, FunctionInfo, ImportInfo, GlobalVar
+from .entities import FileEntities, ClassInfo, FunctionInfo, ImportInfo, GlobalVar, ClassAttr
+
 
 
 def _node_id_repo(name: str) -> str:

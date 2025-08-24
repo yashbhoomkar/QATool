@@ -1,0 +1,2379 @@
+{
+  "nodes": [
+    {
+      "id": "repo:QATool",
+      "type": "Repository",
+      "label": "QATool",
+      "attrs": {
+        "root": "/Users/yashbhoomkar/Desktop/Projects/QATool"
+      }
+    },
+    {
+      "id": "dir:qa_visualizer",
+      "type": "Directory",
+      "label": "qa_visualizer",
+      "attrs": {
+        "path": "qa_visualizer"
+      }
+    },
+    {
+      "id": "file:qa_visualizer/__init__.py",
+      "type": "File",
+      "label": "__init__.py",
+      "attrs": {
+        "path": "qa_visualizer/__init__.py",
+        "module": "qa_visualizer"
+      }
+    },
+    {
+      "id": "file:qa_visualizer/main.py",
+      "type": "File",
+      "label": "main.py",
+      "attrs": {
+        "path": "qa_visualizer/main.py",
+        "module": "qa_visualizer.main"
+      }
+    },
+    {
+      "id": "var:qa_visualizer/main.py#FILE_NAME",
+      "type": "Variable",
+      "label": "FILE_NAME",
+      "attrs": {
+        "annotation": "",
+        "value_preview": "\"/Users/yashbhoomkar/Desktop/Projects/QATool/qa_visualizer/server/services/parse\u2026"
+      }
+    },
+    {
+      "id": "var:qa_visualizer/main.py#REPO",
+      "type": "Variable",
+      "label": "REPO",
+      "attrs": {
+        "annotation": "",
+        "value_preview": "\"/Users/yashbhoomkar/Desktop/Projects/QATool\""
+      }
+    },
+    {
+      "id": "var:qa_visualizer/main.py#graph",
+      "type": "Variable",
+      "label": "graph",
+      "attrs": {
+        "annotation": "",
+        "value_preview": "build_graph(REPO, repo_name=Path(REPO).name, files=files)"
+      }
+    },
+    {
+      "id": "var:qa_visualizer/main.py#out",
+      "type": "Variable",
+      "label": "out",
+      "attrs": {
+        "annotation": "",
+        "value_preview": "save_graph(graph, REPO)"
+      }
+    },
+    {
+      "id": "import:qa_visualizer/main.py#0",
+      "type": "Import",
+      "label": "json",
+      "attrs": {
+        "kind": "import",
+        "module": "json",
+        "name": "",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/main.py#1",
+      "type": "Import",
+      "label": "Path",
+      "attrs": {
+        "kind": "from",
+        "module": "pathlib",
+        "name": "Path",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/main.py#2",
+      "type": "Import",
+      "label": "parse_python_file",
+      "attrs": {
+        "kind": "from",
+        "module": "qa_visualizer.server.services.parser",
+        "name": "parse_python_file",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/main.py#3",
+      "type": "Import",
+      "label": "scan_repo",
+      "attrs": {
+        "kind": "from",
+        "module": "qa_visualizer.server.services.scanner",
+        "name": "scan_repo",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/main.py#4",
+      "type": "Import",
+      "label": "build_graph",
+      "attrs": {
+        "kind": "from",
+        "module": "qa_visualizer.server.services.graph_builder",
+        "name": "build_graph",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/main.py#5",
+      "type": "Import",
+      "label": "save_graph",
+      "attrs": {
+        "kind": "from",
+        "module": "qa_visualizer.server.services.store",
+        "name": "save_graph",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "dir:qa_visualizer/server",
+      "type": "Directory",
+      "label": "qa_visualizer/server",
+      "attrs": {
+        "path": "qa_visualizer/server"
+      }
+    },
+    {
+      "id": "file:qa_visualizer/server/__init__.py",
+      "type": "File",
+      "label": "__init__.py",
+      "attrs": {
+        "path": "qa_visualizer/server/__init__.py",
+        "module": "qa_visualizer.server"
+      }
+    },
+    {
+      "id": "dir:qa_visualizer/server/services",
+      "type": "Directory",
+      "label": "qa_visualizer/server/services",
+      "attrs": {
+        "path": "qa_visualizer/server/services"
+      }
+    },
+    {
+      "id": "file:qa_visualizer/server/services/store.py",
+      "type": "File",
+      "label": "store.py",
+      "attrs": {
+        "path": "qa_visualizer/server/services/store.py",
+        "module": "qa_visualizer.server.services.store"
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.store:ensure_data_dir",
+      "type": "Function",
+      "label": "ensure_data_dir",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.store:ensure_data_dir",
+        "is_method": false,
+        "signature": "(repo_root)",
+        "docstring": "Create .qa_visualizer under the repo root if missing.",
+        "start": 13,
+        "end": 18
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.store:graph_file_path",
+      "type": "Function",
+      "label": "graph_file_path",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.store:graph_file_path",
+        "is_method": false,
+        "signature": "(repo_root)",
+        "docstring": "Absolute path to the graph.json under .qa_visualizer.",
+        "start": 21,
+        "end": 23
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.store:save_graph",
+      "type": "Function",
+      "label": "save_graph",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.store:save_graph",
+        "is_method": false,
+        "signature": "(graph, repo_root)",
+        "docstring": "Write graph JSON to .qa_visualizer/graph.json (pretty-printed).",
+        "start": 26,
+        "end": 30
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.store:load_graph",
+      "type": "Function",
+      "label": "load_graph",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.store:load_graph",
+        "is_method": false,
+        "signature": "(repo_root)",
+        "docstring": "Read graph JSON if present; otherwise return an empty graph shape.",
+        "start": 33,
+        "end": 43
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.store:read_file_text",
+      "type": "Function",
+      "label": "read_file_text",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.store:read_file_text",
+        "is_method": false,
+        "signature": "(repo_root, path)",
+        "docstring": "\n    Return (text, abs_path) for a file.\n    - If `path` is absolute, use it.\n    - If `path` is relative, treat it as relative to repo_root.\n    ",
+        "start": 46,
+        "end": 57
+      }
+    },
+    {
+      "id": "var:qa_visualizer/server/services/store.py#DATA_DIRNAME",
+      "type": "Variable",
+      "label": "DATA_DIRNAME",
+      "attrs": {
+        "annotation": "",
+        "value_preview": "\".qa_visualizer\""
+      }
+    },
+    {
+      "id": "var:qa_visualizer/server/services/store.py#GRAPH_FILENAME",
+      "type": "Variable",
+      "label": "GRAPH_FILENAME",
+      "attrs": {
+        "annotation": "",
+        "value_preview": "\"graph.json\""
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/store.py#0",
+      "type": "Import",
+      "label": "annotations",
+      "attrs": {
+        "kind": "from",
+        "module": "__future__",
+        "name": "annotations",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/store.py#1",
+      "type": "Import",
+      "label": "json",
+      "attrs": {
+        "kind": "import",
+        "module": "json",
+        "name": "",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/store.py#2",
+      "type": "Import",
+      "label": "Path",
+      "attrs": {
+        "kind": "from",
+        "module": "pathlib",
+        "name": "Path",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/store.py#3",
+      "type": "Import",
+      "label": "Any",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "Any",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/store.py#4",
+      "type": "Import",
+      "label": "Dict",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "Dict",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/store.py#5",
+      "type": "Import",
+      "label": "Tuple",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "Tuple",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "file:qa_visualizer/server/services/scanner.py",
+      "type": "File",
+      "label": "scanner.py",
+      "attrs": {
+        "path": "qa_visualizer/server/services/scanner.py",
+        "module": "qa_visualizer.server.services.scanner"
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.scanner:_read_ignore_patterns",
+      "type": "Function",
+      "label": "_read_ignore_patterns",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.scanner:_read_ignore_patterns",
+        "is_method": false,
+        "signature": "(root)",
+        "docstring": "",
+        "start": 31,
+        "end": 41
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.scanner:_is_ignored",
+      "type": "Function",
+      "label": "_is_ignored",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.scanner:_is_ignored",
+        "is_method": false,
+        "signature": "(rel_path, is_dir, patterns)",
+        "docstring": "\n    Very simple pattern filter:\n    - exact directory names from DEFAULT_IGNORED_DIRS are always ignored\n    - support trailing '/*' or simple glob '*' in ignore patterns (best-effort)\n    ",
+        "start": 44,
+        "end": 74
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.scanner:_module_name_from_path",
+      "type": "Function",
+      "label": "_module_name_from_path",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.scanner:_module_name_from_path",
+        "is_method": false,
+        "signature": "(root, file_path)",
+        "docstring": "\n    Compute a dotted module path from a file path relative to root.\n    Handles packages by skipping '__init__.py' in the name.\n    Example:\n      root=/repo, file=/repo/emailrouter/main.py -> 'emailrouter.main'\n      root=/repo, file=/repo/pkg/__init__.py    -> 'pkg'\n    ",
+        "start": 77,
+        "end": 92
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.scanner:iter_python_files",
+      "type": "Function",
+      "label": "iter_python_files",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.scanner:iter_python_files",
+        "is_method": false,
+        "signature": "(root)",
+        "docstring": "",
+        "start": 95,
+        "end": 114
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.scanner:scan_repo",
+      "type": "Function",
+      "label": "scan_repo",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.scanner:scan_repo",
+        "is_method": false,
+        "signature": "(repo_path)",
+        "docstring": "\n    Walk repo_path, parse each .py file, and return (entities_per_file, stats).\n    Stats include counts for files, classes, functions, imports, globals.\n    ",
+        "start": 117,
+        "end": 138
+      }
+    },
+    {
+      "id": "var:qa_visualizer/server/services/scanner.py#DEFAULT_IGNORED_DIRS",
+      "type": "Variable",
+      "label": "DEFAULT_IGNORED_DIRS",
+      "attrs": {
+        "annotation": "",
+        "value_preview": "{\n    \".git\",\n    \"__pycache__\",\n    \"node_modules\",\n    \".venv\",\n    \"venv\",\n  \u2026"
+      }
+    },
+    {
+      "id": "var:qa_visualizer/server/services/scanner.py#IGNORE_FILES",
+      "type": "Variable",
+      "label": "IGNORE_FILES",
+      "attrs": {
+        "annotation": "",
+        "value_preview": "[\".gitignore\", \".qa-visualizerignore\",\"pyproject.toml\",\"requirements.txt\"]"
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/scanner.py#0",
+      "type": "Import",
+      "label": "annotations",
+      "attrs": {
+        "kind": "from",
+        "module": "__future__",
+        "name": "annotations",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/scanner.py#1",
+      "type": "Import",
+      "label": "os",
+      "attrs": {
+        "kind": "import",
+        "module": "os",
+        "name": "",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/scanner.py#2",
+      "type": "Import",
+      "label": "Path",
+      "attrs": {
+        "kind": "from",
+        "module": "pathlib",
+        "name": "Path",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/scanner.py#3",
+      "type": "Import",
+      "label": "Iterable",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "Iterable",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/scanner.py#4",
+      "type": "Import",
+      "label": "List",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "List",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/scanner.py#5",
+      "type": "Import",
+      "label": "Tuple",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "Tuple",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/scanner.py#6",
+      "type": "Import",
+      "label": "Dict",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "Dict",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/scanner.py#7",
+      "type": "Import",
+      "label": "parse_python_file",
+      "attrs": {
+        "kind": "from",
+        "module": ".parser",
+        "name": "parse_python_file",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/scanner.py#8",
+      "type": "Import",
+      "label": "FileEntities",
+      "attrs": {
+        "kind": "from",
+        "module": ".entities",
+        "name": "FileEntities",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/scanner.py#9",
+      "type": "Import",
+      "label": "re",
+      "attrs": {
+        "kind": "import",
+        "module": "re",
+        "name": "",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "file:qa_visualizer/server/services/__init__.py",
+      "type": "File",
+      "label": "__init__.py",
+      "attrs": {
+        "path": "qa_visualizer/server/services/__init__.py",
+        "module": "qa_visualizer.server.services"
+      }
+    },
+    {
+      "id": "file:qa_visualizer/server/services/parser.py",
+      "type": "File",
+      "label": "parser.py",
+      "attrs": {
+        "path": "qa_visualizer/server/services/parser.py",
+        "module": "qa_visualizer.server.services.parser"
+      }
+    },
+    {
+      "id": "class:qa_visualizer.server.services.parser:_EntitiesCollector",
+      "type": "Class",
+      "label": "_EntitiesCollector",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.parser:_EntitiesCollector",
+        "start": 16,
+        "end": 198
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.parser:_EntitiesCollector.__init__",
+      "type": "Function",
+      "label": "__init__",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.parser:_EntitiesCollector.__init__",
+        "is_method": true,
+        "signature": "(self, module_name, source_text)",
+        "docstring": "",
+        "start": 19,
+        "end": 28
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_ClassDef",
+      "type": "Function",
+      "label": "visit_ClassDef",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.parser:_EntitiesCollector.visit_ClassDef",
+        "is_method": true,
+        "signature": "(self, node)",
+        "docstring": "",
+        "start": 31,
+        "end": 46
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.parser:_EntitiesCollector.leave_ClassDef",
+      "type": "Function",
+      "label": "leave_ClassDef",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.parser:_EntitiesCollector.leave_ClassDef",
+        "is_method": true,
+        "signature": "(self, node)",
+        "docstring": "",
+        "start": 48,
+        "end": 49
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_FunctionDef",
+      "type": "Function",
+      "label": "visit_FunctionDef",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.parser:_EntitiesCollector.visit_FunctionDef",
+        "is_method": true,
+        "signature": "(self, node)",
+        "docstring": "",
+        "start": 52,
+        "end": 74
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.parser:_EntitiesCollector.leave_FunctionDef",
+      "type": "Function",
+      "label": "leave_FunctionDef",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.parser:_EntitiesCollector.leave_FunctionDef",
+        "is_method": true,
+        "signature": "(self, node)",
+        "docstring": "",
+        "start": 76,
+        "end": 77
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_Import",
+      "type": "Function",
+      "label": "visit_Import",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.parser:_EntitiesCollector.visit_Import",
+        "is_method": true,
+        "signature": "(self, node)",
+        "docstring": "",
+        "start": 80,
+        "end": 93
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_ImportFrom",
+      "type": "Function",
+      "label": "visit_ImportFrom",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.parser:_EntitiesCollector.visit_ImportFrom",
+        "is_method": true,
+        "signature": "(self, node)",
+        "docstring": "",
+        "start": 95,
+        "end": 112
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_Assign",
+      "type": "Function",
+      "label": "visit_Assign",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.parser:_EntitiesCollector.visit_Assign",
+        "is_method": true,
+        "signature": "(self, node)",
+        "docstring": "",
+        "start": 115,
+        "end": 155
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_AnnAssign",
+      "type": "Function",
+      "label": "visit_AnnAssign",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.parser:_EntitiesCollector.visit_AnnAssign",
+        "is_method": true,
+        "signature": "(self, node)",
+        "docstring": "",
+        "start": 157,
+        "end": 198
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.parser:parse_python_source",
+      "type": "Function",
+      "label": "parse_python_source",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.parser:parse_python_source",
+        "is_method": false,
+        "signature": "(source, *, file_path, module_name=...)",
+        "docstring": "",
+        "start": 201,
+        "end": 214
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.parser:parse_python_file",
+      "type": "Function",
+      "label": "parse_python_file",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.parser:parse_python_file",
+        "is_method": false,
+        "signature": "(path, *, module_name=...)",
+        "docstring": "",
+        "start": 217,
+        "end": 220
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#0",
+      "type": "Import",
+      "label": "annotations",
+      "attrs": {
+        "kind": "from",
+        "module": "__future__",
+        "name": "annotations",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#1",
+      "type": "Import",
+      "label": "Optional",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "Optional",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#2",
+      "type": "Import",
+      "label": "List",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "List",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#3",
+      "type": "Import",
+      "label": "libcst",
+      "attrs": {
+        "kind": "import",
+        "module": "libcst",
+        "name": "",
+        "alias": "cst",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#4",
+      "type": "Import",
+      "label": "MetadataWrapper",
+      "attrs": {
+        "kind": "from",
+        "module": "libcst",
+        "name": "MetadataWrapper",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#5",
+      "type": "Import",
+      "label": "PositionProvider",
+      "attrs": {
+        "kind": "from",
+        "module": "libcst.metadata",
+        "name": "PositionProvider",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#6",
+      "type": "Import",
+      "label": "FileEntities",
+      "attrs": {
+        "kind": "from",
+        "module": ".entities",
+        "name": "FileEntities",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#7",
+      "type": "Import",
+      "label": "ClassInfo",
+      "attrs": {
+        "kind": "from",
+        "module": ".entities",
+        "name": "ClassInfo",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#8",
+      "type": "Import",
+      "label": "ClassAttr",
+      "attrs": {
+        "kind": "from",
+        "module": ".entities",
+        "name": "ClassAttr",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#9",
+      "type": "Import",
+      "label": "FunctionInfo",
+      "attrs": {
+        "kind": "from",
+        "module": ".entities",
+        "name": "FunctionInfo",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#10",
+      "type": "Import",
+      "label": "ImportInfo",
+      "attrs": {
+        "kind": "from",
+        "module": ".entities",
+        "name": "ImportInfo",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#11",
+      "type": "Import",
+      "label": "GlobalVar",
+      "attrs": {
+        "kind": "from",
+        "module": ".entities",
+        "name": "GlobalVar",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#12",
+      "type": "Import",
+      "label": "slice_source_lines",
+      "attrs": {
+        "kind": "from",
+        "module": ".helpers",
+        "name": "slice_source_lines",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#13",
+      "type": "Import",
+      "label": "full_attr_name",
+      "attrs": {
+        "kind": "from",
+        "module": ".helpers",
+        "name": "full_attr_name",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#14",
+      "type": "Import",
+      "label": "first_docstring_from_body",
+      "attrs": {
+        "kind": "from",
+        "module": ".helpers",
+        "name": "first_docstring_from_body",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/parser.py#15",
+      "type": "Import",
+      "label": "params_signature",
+      "attrs": {
+        "kind": "from",
+        "module": ".helpers",
+        "name": "params_signature",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "file:qa_visualizer/server/services/entities.py",
+      "type": "File",
+      "label": "entities.py",
+      "attrs": {
+        "path": "qa_visualizer/server/services/entities.py",
+        "module": "qa_visualizer.server.services.entities"
+      }
+    },
+    {
+      "id": "class:qa_visualizer.server.services.entities:ClassInfo",
+      "type": "Class",
+      "label": "ClassInfo",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.entities:ClassInfo",
+        "start": 8,
+        "end": 13
+      }
+    },
+    {
+      "id": "class:qa_visualizer.server.services.entities:ClassAttr",
+      "type": "Class",
+      "label": "ClassAttr",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.entities:ClassAttr",
+        "start": 17,
+        "end": 25
+      }
+    },
+    {
+      "id": "class:qa_visualizer.server.services.entities:FunctionInfo",
+      "type": "Class",
+      "label": "FunctionInfo",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.entities:FunctionInfo",
+        "start": 29,
+        "end": 37
+      }
+    },
+    {
+      "id": "class:qa_visualizer.server.services.entities:ImportInfo",
+      "type": "Class",
+      "label": "ImportInfo",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.entities:ImportInfo",
+        "start": 41,
+        "end": 47
+      }
+    },
+    {
+      "id": "class:qa_visualizer.server.services.entities:GlobalVar",
+      "type": "Class",
+      "label": "GlobalVar",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.entities:GlobalVar",
+        "start": 51,
+        "end": 54
+      }
+    },
+    {
+      "id": "class:qa_visualizer.server.services.entities:FileEntities",
+      "type": "Class",
+      "label": "FileEntities",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.entities:FileEntities",
+        "start": 58,
+        "end": 76
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.entities:FileEntities.to_dict",
+      "type": "Function",
+      "label": "to_dict",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.entities:FileEntities.to_dict",
+        "is_method": true,
+        "signature": "(self)",
+        "docstring": "",
+        "start": 67,
+        "end": 76
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/entities.py#0",
+      "type": "Import",
+      "label": "annotations",
+      "attrs": {
+        "kind": "from",
+        "module": "__future__",
+        "name": "annotations",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/entities.py#1",
+      "type": "Import",
+      "label": "dataclass",
+      "attrs": {
+        "kind": "from",
+        "module": "dataclasses",
+        "name": "dataclass",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/entities.py#2",
+      "type": "Import",
+      "label": "asdict",
+      "attrs": {
+        "kind": "from",
+        "module": "dataclasses",
+        "name": "asdict",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/entities.py#3",
+      "type": "Import",
+      "label": "List",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "List",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/entities.py#4",
+      "type": "Import",
+      "label": "Optional",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "Optional",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/entities.py#5",
+      "type": "Import",
+      "label": "Dict",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "Dict",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/entities.py#6",
+      "type": "Import",
+      "label": "Any",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "Any",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "file:qa_visualizer/server/services/graph_builder.py",
+      "type": "File",
+      "label": "graph_builder.py",
+      "attrs": {
+        "path": "qa_visualizer/server/services/graph_builder.py",
+        "module": "qa_visualizer.server.services.graph_builder"
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.graph_builder:_node_id_repo",
+      "type": "Function",
+      "label": "_node_id_repo",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.graph_builder:_node_id_repo",
+        "is_method": false,
+        "signature": "(name)",
+        "docstring": "",
+        "start": 11,
+        "end": 12
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.graph_builder:_node_id_dir",
+      "type": "Function",
+      "label": "_node_id_dir",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.graph_builder:_node_id_dir",
+        "is_method": false,
+        "signature": "(rel_dir)",
+        "docstring": "",
+        "start": 15,
+        "end": 17
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.graph_builder:_node_id_file",
+      "type": "Function",
+      "label": "_node_id_file",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.graph_builder:_node_id_file",
+        "is_method": false,
+        "signature": "(rel_file)",
+        "docstring": "",
+        "start": 20,
+        "end": 21
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.graph_builder:_node_id_class",
+      "type": "Function",
+      "label": "_node_id_class",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.graph_builder:_node_id_class",
+        "is_method": false,
+        "signature": "(qname)",
+        "docstring": "",
+        "start": 24,
+        "end": 25
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.graph_builder:_node_id_func",
+      "type": "Function",
+      "label": "_node_id_func",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.graph_builder:_node_id_func",
+        "is_method": false,
+        "signature": "(qname)",
+        "docstring": "",
+        "start": 28,
+        "end": 29
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.graph_builder:_node_id_var",
+      "type": "Function",
+      "label": "_node_id_var",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.graph_builder:_node_id_var",
+        "is_method": false,
+        "signature": "(file_rel, name)",
+        "docstring": "",
+        "start": 32,
+        "end": 34
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.graph_builder:_node_id_import",
+      "type": "Function",
+      "label": "_node_id_import",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.graph_builder:_node_id_import",
+        "is_method": false,
+        "signature": "(file_rel, index)",
+        "docstring": "",
+        "start": 37,
+        "end": 39
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.graph_builder:_edge_id",
+      "type": "Function",
+      "label": "_edge_id",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.graph_builder:_edge_id",
+        "is_method": false,
+        "signature": "(source, target, etype)",
+        "docstring": "",
+        "start": 42,
+        "end": 43
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.graph_builder:_ensure_node",
+      "type": "Function",
+      "label": "_ensure_node",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.graph_builder:_ensure_node",
+        "is_method": false,
+        "signature": "(nodes, node)",
+        "docstring": "",
+        "start": 46,
+        "end": 49
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.graph_builder:_ensure_edge",
+      "type": "Function",
+      "label": "_ensure_edge",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.graph_builder:_ensure_edge",
+        "is_method": false,
+        "signature": "(edges, edge)",
+        "docstring": "",
+        "start": 52,
+        "end": 55
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.graph_builder:_posix_rel",
+      "type": "Function",
+      "label": "_posix_rel",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.graph_builder:_posix_rel",
+        "is_method": false,
+        "signature": "(root, full_path)",
+        "docstring": "",
+        "start": 58,
+        "end": 59
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.graph_builder:build_graph",
+      "type": "Function",
+      "label": "build_graph",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.graph_builder:build_graph",
+        "is_method": false,
+        "signature": "(repo_root, repo_name, files)",
+        "docstring": "\n    Build a normalized graph dict:\n    {\n      \"nodes\": [ ... ],\n      \"edges\": [ ... ],\n      \"meta\": { \"repo\": repo_name }\n    }\n    ",
+        "start": 62,
+        "end": 254
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.graph_builder:ensure_dir_nodes_for",
+      "type": "Function",
+      "label": "ensure_dir_nodes_for",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.graph_builder:ensure_dir_nodes_for",
+        "is_method": false,
+        "signature": "(rel_file)",
+        "docstring": "",
+        "start": 90,
+        "end": 120
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/graph_builder.py#0",
+      "type": "Import",
+      "label": "annotations",
+      "attrs": {
+        "kind": "from",
+        "module": "__future__",
+        "name": "annotations",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/graph_builder.py#1",
+      "type": "Import",
+      "label": "Path",
+      "attrs": {
+        "kind": "from",
+        "module": "pathlib",
+        "name": "Path",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/graph_builder.py#2",
+      "type": "Import",
+      "label": "Dict",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "Dict",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/graph_builder.py#3",
+      "type": "Import",
+      "label": "List",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "List",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/graph_builder.py#4",
+      "type": "Import",
+      "label": "Tuple",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "Tuple",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/graph_builder.py#5",
+      "type": "Import",
+      "label": "Any",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "Any",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/graph_builder.py#6",
+      "type": "Import",
+      "label": "Set",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "Set",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/graph_builder.py#7",
+      "type": "Import",
+      "label": "FileEntities",
+      "attrs": {
+        "kind": "from",
+        "module": ".entities",
+        "name": "FileEntities",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/graph_builder.py#8",
+      "type": "Import",
+      "label": "ClassInfo",
+      "attrs": {
+        "kind": "from",
+        "module": ".entities",
+        "name": "ClassInfo",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/graph_builder.py#9",
+      "type": "Import",
+      "label": "FunctionInfo",
+      "attrs": {
+        "kind": "from",
+        "module": ".entities",
+        "name": "FunctionInfo",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/graph_builder.py#10",
+      "type": "Import",
+      "label": "ImportInfo",
+      "attrs": {
+        "kind": "from",
+        "module": ".entities",
+        "name": "ImportInfo",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/graph_builder.py#11",
+      "type": "Import",
+      "label": "GlobalVar",
+      "attrs": {
+        "kind": "from",
+        "module": ".entities",
+        "name": "GlobalVar",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/graph_builder.py#12",
+      "type": "Import",
+      "label": "ClassAttr",
+      "attrs": {
+        "kind": "from",
+        "module": ".entities",
+        "name": "ClassAttr",
+        "alias": "",
+        "is_relative": true,
+        "level": 1
+      }
+    },
+    {
+      "id": "file:qa_visualizer/server/services/helpers.py",
+      "type": "File",
+      "label": "helpers.py",
+      "attrs": {
+        "path": "qa_visualizer/server/services/helpers.py",
+        "module": "qa_visualizer.server.services.helpers"
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.helpers:slice_source_lines",
+      "type": "Function",
+      "label": "slice_source_lines",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.helpers:slice_source_lines",
+        "is_method": false,
+        "signature": "(src, start_line, end_line)",
+        "docstring": "Inclusive line slice, preserves original whitespace.",
+        "start": 7,
+        "end": 12
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.helpers:full_attr_name",
+      "type": "Function",
+      "label": "full_attr_name",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.helpers:full_attr_name",
+        "is_method": false,
+        "signature": "(node)",
+        "docstring": "Turn a Name or Attribute into a dotted string.",
+        "start": 15,
+        "end": 24
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.helpers:first_docstring_from_body",
+      "type": "Function",
+      "label": "first_docstring_from_body",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.helpers:first_docstring_from_body",
+        "is_method": false,
+        "signature": "(body)",
+        "docstring": "Return docstring from the first statement in a body if present.",
+        "start": 27,
+        "end": 36
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.helpers:params_signature",
+      "type": "Function",
+      "label": "params_signature",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.helpers:params_signature",
+        "is_method": false,
+        "signature": "(params)",
+        "docstring": "Readable signature like 'a, b=..., *args, **kwargs'.",
+        "start": 39,
+        "end": 70
+      }
+    },
+    {
+      "id": "func:qa_visualizer.server.services.helpers:name_of",
+      "type": "Function",
+      "label": "name_of",
+      "attrs": {
+        "qname": "qa_visualizer.server.services.helpers:name_of",
+        "is_method": false,
+        "signature": "(p)",
+        "docstring": "",
+        "start": 41,
+        "end": 42
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/helpers.py#0",
+      "type": "Import",
+      "label": "annotations",
+      "attrs": {
+        "kind": "from",
+        "module": "__future__",
+        "name": "annotations",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/helpers.py#1",
+      "type": "Import",
+      "label": "List",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "List",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/helpers.py#2",
+      "type": "Import",
+      "label": "Optional",
+      "attrs": {
+        "kind": "from",
+        "module": "typing",
+        "name": "Optional",
+        "alias": "",
+        "is_relative": false,
+        "level": 0
+      }
+    },
+    {
+      "id": "import:qa_visualizer/server/services/helpers.py#3",
+      "type": "Import",
+      "label": "libcst",
+      "attrs": {
+        "kind": "import",
+        "module": "libcst",
+        "name": "",
+        "alias": "cst",
+        "is_relative": false,
+        "level": 0
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge:CONTAINS:repo:QATool->dir:qa_visualizer",
+      "type": "CONTAINS",
+      "source": "repo:QATool",
+      "target": "dir:qa_visualizer"
+    },
+    {
+      "id": "edge:CONTAINS:dir:qa_visualizer->file:qa_visualizer/__init__.py",
+      "type": "CONTAINS",
+      "source": "dir:qa_visualizer",
+      "target": "file:qa_visualizer/__init__.py"
+    },
+    {
+      "id": "edge:CONTAINS:dir:qa_visualizer->file:qa_visualizer/main.py",
+      "type": "CONTAINS",
+      "source": "dir:qa_visualizer",
+      "target": "file:qa_visualizer/main.py"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/main.py->var:qa_visualizer/main.py#FILE_NAME",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/main.py",
+      "target": "var:qa_visualizer/main.py#FILE_NAME"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/main.py->var:qa_visualizer/main.py#REPO",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/main.py",
+      "target": "var:qa_visualizer/main.py#REPO"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/main.py->var:qa_visualizer/main.py#graph",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/main.py",
+      "target": "var:qa_visualizer/main.py#graph"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/main.py->var:qa_visualizer/main.py#out",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/main.py",
+      "target": "var:qa_visualizer/main.py#out"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/main.py->import:qa_visualizer/main.py#0",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/main.py",
+      "target": "import:qa_visualizer/main.py#0"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/main.py->import:qa_visualizer/main.py#1",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/main.py",
+      "target": "import:qa_visualizer/main.py#1"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/main.py->import:qa_visualizer/main.py#2",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/main.py",
+      "target": "import:qa_visualizer/main.py#2"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/main.py->import:qa_visualizer/main.py#3",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/main.py",
+      "target": "import:qa_visualizer/main.py#3"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/main.py->import:qa_visualizer/main.py#4",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/main.py",
+      "target": "import:qa_visualizer/main.py#4"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/main.py->import:qa_visualizer/main.py#5",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/main.py",
+      "target": "import:qa_visualizer/main.py#5"
+    },
+    {
+      "id": "edge:CONTAINS:dir:qa_visualizer->dir:qa_visualizer/server",
+      "type": "CONTAINS",
+      "source": "dir:qa_visualizer",
+      "target": "dir:qa_visualizer/server"
+    },
+    {
+      "id": "edge:CONTAINS:dir:qa_visualizer/server->file:qa_visualizer/server/__init__.py",
+      "type": "CONTAINS",
+      "source": "dir:qa_visualizer/server",
+      "target": "file:qa_visualizer/server/__init__.py"
+    },
+    {
+      "id": "edge:CONTAINS:dir:qa_visualizer/server->dir:qa_visualizer/server/services",
+      "type": "CONTAINS",
+      "source": "dir:qa_visualizer/server",
+      "target": "dir:qa_visualizer/server/services"
+    },
+    {
+      "id": "edge:CONTAINS:dir:qa_visualizer/server/services->file:qa_visualizer/server/services/store.py",
+      "type": "CONTAINS",
+      "source": "dir:qa_visualizer/server/services",
+      "target": "file:qa_visualizer/server/services/store.py"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/store.py->func:qa_visualizer.server.services.store:ensure_data_dir",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/store.py",
+      "target": "func:qa_visualizer.server.services.store:ensure_data_dir"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/store.py->func:qa_visualizer.server.services.store:graph_file_path",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/store.py",
+      "target": "func:qa_visualizer.server.services.store:graph_file_path"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/store.py->func:qa_visualizer.server.services.store:save_graph",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/store.py",
+      "target": "func:qa_visualizer.server.services.store:save_graph"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/store.py->func:qa_visualizer.server.services.store:load_graph",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/store.py",
+      "target": "func:qa_visualizer.server.services.store:load_graph"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/store.py->func:qa_visualizer.server.services.store:read_file_text",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/store.py",
+      "target": "func:qa_visualizer.server.services.store:read_file_text"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/store.py->var:qa_visualizer/server/services/store.py#DATA_DIRNAME",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/store.py",
+      "target": "var:qa_visualizer/server/services/store.py#DATA_DIRNAME"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/store.py->var:qa_visualizer/server/services/store.py#GRAPH_FILENAME",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/store.py",
+      "target": "var:qa_visualizer/server/services/store.py#GRAPH_FILENAME"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/store.py->import:qa_visualizer/server/services/store.py#0",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/store.py",
+      "target": "import:qa_visualizer/server/services/store.py#0"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/store.py->import:qa_visualizer/server/services/store.py#1",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/store.py",
+      "target": "import:qa_visualizer/server/services/store.py#1"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/store.py->import:qa_visualizer/server/services/store.py#2",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/store.py",
+      "target": "import:qa_visualizer/server/services/store.py#2"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/store.py->import:qa_visualizer/server/services/store.py#3",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/store.py",
+      "target": "import:qa_visualizer/server/services/store.py#3"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/store.py->import:qa_visualizer/server/services/store.py#4",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/store.py",
+      "target": "import:qa_visualizer/server/services/store.py#4"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/store.py->import:qa_visualizer/server/services/store.py#5",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/store.py",
+      "target": "import:qa_visualizer/server/services/store.py#5"
+    },
+    {
+      "id": "edge:CONTAINS:dir:qa_visualizer/server/services->file:qa_visualizer/server/services/scanner.py",
+      "type": "CONTAINS",
+      "source": "dir:qa_visualizer/server/services",
+      "target": "file:qa_visualizer/server/services/scanner.py"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/scanner.py->func:qa_visualizer.server.services.scanner:_read_ignore_patterns",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "func:qa_visualizer.server.services.scanner:_read_ignore_patterns"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/scanner.py->func:qa_visualizer.server.services.scanner:_is_ignored",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "func:qa_visualizer.server.services.scanner:_is_ignored"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/scanner.py->func:qa_visualizer.server.services.scanner:_module_name_from_path",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "func:qa_visualizer.server.services.scanner:_module_name_from_path"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/scanner.py->func:qa_visualizer.server.services.scanner:iter_python_files",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "func:qa_visualizer.server.services.scanner:iter_python_files"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/scanner.py->func:qa_visualizer.server.services.scanner:scan_repo",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "func:qa_visualizer.server.services.scanner:scan_repo"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/scanner.py->var:qa_visualizer/server/services/scanner.py#DEFAULT_IGNORED_DIRS",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "var:qa_visualizer/server/services/scanner.py#DEFAULT_IGNORED_DIRS"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/scanner.py->var:qa_visualizer/server/services/scanner.py#IGNORE_FILES",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "var:qa_visualizer/server/services/scanner.py#IGNORE_FILES"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/scanner.py->import:qa_visualizer/server/services/scanner.py#0",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "import:qa_visualizer/server/services/scanner.py#0"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/scanner.py->import:qa_visualizer/server/services/scanner.py#1",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "import:qa_visualizer/server/services/scanner.py#1"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/scanner.py->import:qa_visualizer/server/services/scanner.py#2",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "import:qa_visualizer/server/services/scanner.py#2"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/scanner.py->import:qa_visualizer/server/services/scanner.py#3",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "import:qa_visualizer/server/services/scanner.py#3"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/scanner.py->import:qa_visualizer/server/services/scanner.py#4",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "import:qa_visualizer/server/services/scanner.py#4"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/scanner.py->import:qa_visualizer/server/services/scanner.py#5",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "import:qa_visualizer/server/services/scanner.py#5"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/scanner.py->import:qa_visualizer/server/services/scanner.py#6",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "import:qa_visualizer/server/services/scanner.py#6"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/scanner.py->import:qa_visualizer/server/services/scanner.py#7",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "import:qa_visualizer/server/services/scanner.py#7"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/scanner.py->import:qa_visualizer/server/services/scanner.py#8",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "import:qa_visualizer/server/services/scanner.py#8"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/scanner.py->import:qa_visualizer/server/services/scanner.py#9",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/scanner.py",
+      "target": "import:qa_visualizer/server/services/scanner.py#9"
+    },
+    {
+      "id": "edge:CONTAINS:dir:qa_visualizer/server/services->file:qa_visualizer/server/services/__init__.py",
+      "type": "CONTAINS",
+      "source": "dir:qa_visualizer/server/services",
+      "target": "file:qa_visualizer/server/services/__init__.py"
+    },
+    {
+      "id": "edge:CONTAINS:dir:qa_visualizer/server/services->file:qa_visualizer/server/services/parser.py",
+      "type": "CONTAINS",
+      "source": "dir:qa_visualizer/server/services",
+      "target": "file:qa_visualizer/server/services/parser.py"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/parser.py->class:qa_visualizer.server.services.parser:_EntitiesCollector",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "class:qa_visualizer.server.services.parser:_EntitiesCollector"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/parser.py->func:qa_visualizer.server.services.parser:_EntitiesCollector.__init__",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "func:qa_visualizer.server.services.parser:_EntitiesCollector.__init__"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/parser.py->func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_ClassDef",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_ClassDef"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/parser.py->func:qa_visualizer.server.services.parser:_EntitiesCollector.leave_ClassDef",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "func:qa_visualizer.server.services.parser:_EntitiesCollector.leave_ClassDef"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/parser.py->func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_FunctionDef",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_FunctionDef"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/parser.py->func:qa_visualizer.server.services.parser:_EntitiesCollector.leave_FunctionDef",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "func:qa_visualizer.server.services.parser:_EntitiesCollector.leave_FunctionDef"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/parser.py->func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_Import",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_Import"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/parser.py->func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_ImportFrom",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_ImportFrom"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/parser.py->func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_Assign",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_Assign"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/parser.py->func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_AnnAssign",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "func:qa_visualizer.server.services.parser:_EntitiesCollector.visit_AnnAssign"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/parser.py->func:qa_visualizer.server.services.parser:parse_python_source",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "func:qa_visualizer.server.services.parser:parse_python_source"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/parser.py->func:qa_visualizer.server.services.parser:parse_python_file",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "func:qa_visualizer.server.services.parser:parse_python_file"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#0",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#0"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#1",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#1"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#2",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#2"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#3",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#3"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#4",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#4"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#5",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#5"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#6",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#6"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#7",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#7"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#8",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#8"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#9",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#9"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#10",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#10"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#11",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#11"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#12",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#12"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#13",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#13"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#14",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#14"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/parser.py->import:qa_visualizer/server/services/parser.py#15",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/parser.py",
+      "target": "import:qa_visualizer/server/services/parser.py#15"
+    },
+    {
+      "id": "edge:CONTAINS:dir:qa_visualizer/server/services->file:qa_visualizer/server/services/entities.py",
+      "type": "CONTAINS",
+      "source": "dir:qa_visualizer/server/services",
+      "target": "file:qa_visualizer/server/services/entities.py"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/entities.py->class:qa_visualizer.server.services.entities:ClassInfo",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/entities.py",
+      "target": "class:qa_visualizer.server.services.entities:ClassInfo"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/entities.py->class:qa_visualizer.server.services.entities:ClassAttr",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/entities.py",
+      "target": "class:qa_visualizer.server.services.entities:ClassAttr"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/entities.py->class:qa_visualizer.server.services.entities:FunctionInfo",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/entities.py",
+      "target": "class:qa_visualizer.server.services.entities:FunctionInfo"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/entities.py->class:qa_visualizer.server.services.entities:ImportInfo",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/entities.py",
+      "target": "class:qa_visualizer.server.services.entities:ImportInfo"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/entities.py->class:qa_visualizer.server.services.entities:GlobalVar",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/entities.py",
+      "target": "class:qa_visualizer.server.services.entities:GlobalVar"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/entities.py->class:qa_visualizer.server.services.entities:FileEntities",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/entities.py",
+      "target": "class:qa_visualizer.server.services.entities:FileEntities"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/entities.py->func:qa_visualizer.server.services.entities:FileEntities.to_dict",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/entities.py",
+      "target": "func:qa_visualizer.server.services.entities:FileEntities.to_dict"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/entities.py->import:qa_visualizer/server/services/entities.py#0",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/entities.py",
+      "target": "import:qa_visualizer/server/services/entities.py#0"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/entities.py->import:qa_visualizer/server/services/entities.py#1",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/entities.py",
+      "target": "import:qa_visualizer/server/services/entities.py#1"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/entities.py->import:qa_visualizer/server/services/entities.py#2",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/entities.py",
+      "target": "import:qa_visualizer/server/services/entities.py#2"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/entities.py->import:qa_visualizer/server/services/entities.py#3",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/entities.py",
+      "target": "import:qa_visualizer/server/services/entities.py#3"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/entities.py->import:qa_visualizer/server/services/entities.py#4",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/entities.py",
+      "target": "import:qa_visualizer/server/services/entities.py#4"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/entities.py->import:qa_visualizer/server/services/entities.py#5",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/entities.py",
+      "target": "import:qa_visualizer/server/services/entities.py#5"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/entities.py->import:qa_visualizer/server/services/entities.py#6",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/entities.py",
+      "target": "import:qa_visualizer/server/services/entities.py#6"
+    },
+    {
+      "id": "edge:CONTAINS:dir:qa_visualizer/server/services->file:qa_visualizer/server/services/graph_builder.py",
+      "type": "CONTAINS",
+      "source": "dir:qa_visualizer/server/services",
+      "target": "file:qa_visualizer/server/services/graph_builder.py"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/graph_builder.py->func:qa_visualizer.server.services.graph_builder:_node_id_repo",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "func:qa_visualizer.server.services.graph_builder:_node_id_repo"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/graph_builder.py->func:qa_visualizer.server.services.graph_builder:_node_id_dir",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "func:qa_visualizer.server.services.graph_builder:_node_id_dir"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/graph_builder.py->func:qa_visualizer.server.services.graph_builder:_node_id_file",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "func:qa_visualizer.server.services.graph_builder:_node_id_file"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/graph_builder.py->func:qa_visualizer.server.services.graph_builder:_node_id_class",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "func:qa_visualizer.server.services.graph_builder:_node_id_class"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/graph_builder.py->func:qa_visualizer.server.services.graph_builder:_node_id_func",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "func:qa_visualizer.server.services.graph_builder:_node_id_func"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/graph_builder.py->func:qa_visualizer.server.services.graph_builder:_node_id_var",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "func:qa_visualizer.server.services.graph_builder:_node_id_var"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/graph_builder.py->func:qa_visualizer.server.services.graph_builder:_node_id_import",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "func:qa_visualizer.server.services.graph_builder:_node_id_import"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/graph_builder.py->func:qa_visualizer.server.services.graph_builder:_edge_id",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "func:qa_visualizer.server.services.graph_builder:_edge_id"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/graph_builder.py->func:qa_visualizer.server.services.graph_builder:_ensure_node",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "func:qa_visualizer.server.services.graph_builder:_ensure_node"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/graph_builder.py->func:qa_visualizer.server.services.graph_builder:_ensure_edge",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "func:qa_visualizer.server.services.graph_builder:_ensure_edge"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/graph_builder.py->func:qa_visualizer.server.services.graph_builder:_posix_rel",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "func:qa_visualizer.server.services.graph_builder:_posix_rel"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/graph_builder.py->func:qa_visualizer.server.services.graph_builder:build_graph",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "func:qa_visualizer.server.services.graph_builder:build_graph"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/graph_builder.py->func:qa_visualizer.server.services.graph_builder:ensure_dir_nodes_for",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "func:qa_visualizer.server.services.graph_builder:ensure_dir_nodes_for"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/graph_builder.py->import:qa_visualizer/server/services/graph_builder.py#0",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "import:qa_visualizer/server/services/graph_builder.py#0"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/graph_builder.py->import:qa_visualizer/server/services/graph_builder.py#1",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "import:qa_visualizer/server/services/graph_builder.py#1"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/graph_builder.py->import:qa_visualizer/server/services/graph_builder.py#2",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "import:qa_visualizer/server/services/graph_builder.py#2"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/graph_builder.py->import:qa_visualizer/server/services/graph_builder.py#3",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "import:qa_visualizer/server/services/graph_builder.py#3"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/graph_builder.py->import:qa_visualizer/server/services/graph_builder.py#4",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "import:qa_visualizer/server/services/graph_builder.py#4"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/graph_builder.py->import:qa_visualizer/server/services/graph_builder.py#5",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "import:qa_visualizer/server/services/graph_builder.py#5"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/graph_builder.py->import:qa_visualizer/server/services/graph_builder.py#6",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "import:qa_visualizer/server/services/graph_builder.py#6"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/graph_builder.py->import:qa_visualizer/server/services/graph_builder.py#7",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "import:qa_visualizer/server/services/graph_builder.py#7"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/graph_builder.py->import:qa_visualizer/server/services/graph_builder.py#8",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "import:qa_visualizer/server/services/graph_builder.py#8"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/graph_builder.py->import:qa_visualizer/server/services/graph_builder.py#9",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "import:qa_visualizer/server/services/graph_builder.py#9"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/graph_builder.py->import:qa_visualizer/server/services/graph_builder.py#10",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "import:qa_visualizer/server/services/graph_builder.py#10"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/graph_builder.py->import:qa_visualizer/server/services/graph_builder.py#11",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "import:qa_visualizer/server/services/graph_builder.py#11"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/graph_builder.py->import:qa_visualizer/server/services/graph_builder.py#12",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/graph_builder.py",
+      "target": "import:qa_visualizer/server/services/graph_builder.py#12"
+    },
+    {
+      "id": "edge:CONTAINS:dir:qa_visualizer/server/services->file:qa_visualizer/server/services/helpers.py",
+      "type": "CONTAINS",
+      "source": "dir:qa_visualizer/server/services",
+      "target": "file:qa_visualizer/server/services/helpers.py"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/helpers.py->func:qa_visualizer.server.services.helpers:slice_source_lines",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/helpers.py",
+      "target": "func:qa_visualizer.server.services.helpers:slice_source_lines"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/helpers.py->func:qa_visualizer.server.services.helpers:full_attr_name",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/helpers.py",
+      "target": "func:qa_visualizer.server.services.helpers:full_attr_name"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/helpers.py->func:qa_visualizer.server.services.helpers:first_docstring_from_body",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/helpers.py",
+      "target": "func:qa_visualizer.server.services.helpers:first_docstring_from_body"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/helpers.py->func:qa_visualizer.server.services.helpers:params_signature",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/helpers.py",
+      "target": "func:qa_visualizer.server.services.helpers:params_signature"
+    },
+    {
+      "id": "edge:DECLARES:file:qa_visualizer/server/services/helpers.py->func:qa_visualizer.server.services.helpers:name_of",
+      "type": "DECLARES",
+      "source": "file:qa_visualizer/server/services/helpers.py",
+      "target": "func:qa_visualizer.server.services.helpers:name_of"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/helpers.py->import:qa_visualizer/server/services/helpers.py#0",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/helpers.py",
+      "target": "import:qa_visualizer/server/services/helpers.py#0"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/helpers.py->import:qa_visualizer/server/services/helpers.py#1",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/helpers.py",
+      "target": "import:qa_visualizer/server/services/helpers.py#1"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/helpers.py->import:qa_visualizer/server/services/helpers.py#2",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/helpers.py",
+      "target": "import:qa_visualizer/server/services/helpers.py#2"
+    },
+    {
+      "id": "edge:IMPORTS:file:qa_visualizer/server/services/helpers.py->import:qa_visualizer/server/services/helpers.py#3",
+      "type": "IMPORTS",
+      "source": "file:qa_visualizer/server/services/helpers.py",
+      "target": "import:qa_visualizer/server/services/helpers.py#3"
+    }
+  ],
+  "meta": {
+    "repo": "QATool"
+  }
+}

@@ -4,7 +4,8 @@ import os
 from pathlib import Path
 from typing import Iterable, List, Tuple, Dict
 
-from .parser import parse_python_file, FileEntities
+from .parser import parse_python_file
+from .entities import FileEntities
 
 # Default directories to skip
 DEFAULT_IGNORED_DIRS = {
@@ -19,10 +20,12 @@ DEFAULT_IGNORED_DIRS = {
     ".vscode",
     "dist",
     "build",
-    "myvenv"
+    "myvenv",
+    ".qa_visualizer",
+    "myenv"
 }
 
-IGNORE_FILES = [".gitignore", ".qa-visualizerignore"]
+IGNORE_FILES = [".gitignore", ".qa-visualizerignore","pyproject.toml","requirements.txt"]
 
 
 def _read_ignore_patterns(root: Path) -> List[str]:
